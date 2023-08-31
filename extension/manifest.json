@@ -1,0 +1,28 @@
+{
+	"name": "Amtec Extension",
+	"version": "0.0.0.1",
+	"manifest_version": 3,
+	"description": "Improves the UI of Amtec's website.",
+	"options_page": "options.html",
+	"icons": {
+
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"./index.js"
+			],
+			"matches": [
+				"https://amtec.skilled.me/*"
+			]
+		}
+	],
+	"permissions": [
+		"storage"
+	],
+	"content_security_policy": {
+		"sandbox": "sandbox 'unsafe-eval' script-src 'sha256-zEBXnk0f9AUq2KR0Vz1vIhJux6zWED8dXwnUePV28Q0='"
+
+	}
+
+}
